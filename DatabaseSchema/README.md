@@ -9,6 +9,7 @@ SQL schema, seed data, and a simple Java connection example for the `jjs_automat
 - `sql/TablesData.sql`: seed restaurant table records.
 - `sql/MenuItemsData.sql`: seed menu data.
 - `sql/ClockEventsData.sql`: seed employee clock events.
+- `sql/DatabaseQueries.sql`: reusable query reference for Java `PreparedStatement` calls.
 - `sql/RestData.sql`: seed inventory, orders, order items, and refund requests.
 - `MySqlConnect.java`: simple JDBC connection test.
 
