@@ -2,110 +2,51 @@
 
 JavaFX restaurant management/POS application for JJ's Corner.
 
-## Run the Mac App
+## How to Run the App on Mac
 
-For Mac users who do not have Java installed, download:
+For Mac users who do not have Java installed, use the packaged Mac app:
 
 ```text
 FinalProject/dist/Automation-of-JJs-mac.zip
 ```
 
-Unzip it, then open:
+Download and unzip `Automation-of-JJs-mac.zip`, then open:
 
 ```text
 Automation of JJs.app
 ```
 
-If macOS says Apple cannot verify the app, right-click the app, choose **Open**, then choose **Open** again. This happens because the app is not signed with an Apple Developer account.
+Special note for Mac: if macOS says Apple cannot verify the app, right-click `Automation of JJs.app`, choose **Open**, then choose **Open** again. This happens because the app is not signed with an Apple Developer account.
 
-## Run the JAR
+## How to Run the JAR
 
-The runnable JAR is included at:
+The runnable JAR file is located here:
 
 ```text
-main/target/automation-of-jjs-1.0.0.jar
+FinalProject/main/target/automation-of-jjs-1.0.0.jar
 ```
 
-From the `FinalProject` folder, run:
+From the repository root, run:
+
+```bash
+java -jar FinalProject/main/target/automation-of-jjs-1.0.0.jar
+```
+
+From inside the `FinalProject` folder, run:
 
 ```bash
 java -jar main/target/automation-of-jjs-1.0.0.jar
 ```
 
-If you are already inside the `main` folder, run:
-
-```bash
-java -jar target/automation-of-jjs-1.0.0.jar
-```
-
-## Requirements
-
-Install Java JDK 25 before running the JAR.
-
-Check Java:
+Special note for the JAR: Java JDK 25 is required to run the JAR directly. Check Java with:
 
 ```bash
 java -version
 ```
 
-The project currently uses Java release 25 in `main/pom.xml`:
+## Default Accounts
 
-```xml
-<maven.compiler.release>25</maven.compiler.release>
-```
-
-## Build the JAR
-
-Install Apache Maven if you want to rebuild the JAR from source.
-
-From the `FinalProject/main` folder:
-
-```bash
-mvn clean package
-```
-
-The built JAR will be created here:
-
-```text
-main/target/automation-of-jjs-1.0.0.jar
-```
-
-## Run from Maven
-
-Open a terminal in the downloaded `FinalProject` folder, then go into the Maven project folder:
-
-```bash
-cd main
-mvn javafx:run
-```
-
-If you are already outside the folder, use the full path instead:
-
-```bash
-cd path/to/FinalProject/main
-mvn javafx:run
-```
-
-## First-Time Setup
-
-After downloading or cloning the project:
-
-```bash
-cd FinalProject/main
-mvn clean compile
-mvn javafx:run
-```
-
-Maven will automatically download the project dependencies:
-
-- JavaFX Controls
-- JavaFX FXML
-- Jackson Databind
-- Jackson JSR310 datatype support
-
-## Default Test Accounts
-
-These accounts are created automatically when the app starts with no saved employee data.
+These accounts already exist when the app starts with no saved employee data.
 
 | Role | Employee ID | Username | Password |
 | --- | --- | --- | --- |
@@ -118,15 +59,33 @@ These accounts are created automatically when the app starts with no saved emplo
 | Cook | CK002A | cook2 | c2d3e4 |
 | Cook | CK003A | cook3 | c3d4e5 |
 
-Use the manager account to test manager features:
+Recommended test login:
 
 ```text
 Username: manager1
 Password: m1n2g3
 ```
 
-## Notes
+## Folder Structure
 
-- Run commands from the `main` folder because that is where `pom.xml` is located.
-- The first run may take longer while Maven downloads dependencies.
-- Employee, menu, inventory, table, and ticket data are persisted by the app after use.
+```text
+FinalProject/
+|-- README.md
+|-- dist/
+|   `-- Automation-of-JJs-mac.zip
+`-- main/
+    |-- pom.xml
+    |-- java/
+    |   `-- com/jjcorner/app/
+    |-- resources/
+    |   `-- com/jjcorner/view/
+    `-- target/
+        `-- automation-of-jjs-1.0.0.jar
+```
+
+## Special Remarks
+
+- The Mac app ZIP includes its own Java runtime.
+- The JAR is the main executable file for users who already have Java installed.
+- The app saves employee, menu, inventory, table, and ticket data after use.
+- If data files already exist from a previous run, the default accounts may not be recreated.
