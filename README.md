@@ -14,6 +14,7 @@ mvn javafx:run
 
 - **Waiter**: username `waiter1`, password `a1b2c3`
 - **Busboy**: username `busboy1`, password `b1c2d3`
+- **Manager**: username manager2 , password 'm1n2o3'
 
 You can also create new accounts using **Sign Up** (Employee ID must be 6 alphanumeric chars; password must be exactly 6 chars and not uniform/sequential).
 
