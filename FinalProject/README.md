@@ -2,6 +2,22 @@
 
 JavaFX restaurant management/POS application for JJ's Corner.
 
+## Run the Mac App
+
+For Mac users who do not have Java installed, download:
+
+```text
+FinalProject/dist/Automation-of-JJs-mac.zip
+```
+
+Unzip it, then open:
+
+```text
+Automation of JJs.app
+```
+
+If macOS says Apple cannot verify the app, right-click the app, choose **Open**, then choose **Open** again. This happens because the app is not signed with an Apple Developer account.
+
 ## Run the JAR
 
 The runnable JAR is included at:
@@ -114,4 +130,3 @@ Password: m1n2g3
 - Run commands from the `main` folder because that is where `pom.xml` is located.
 - The first run may take longer while Maven downloads dependencies.
 - Employee, menu, inventory, table, and ticket data are persisted by the app after use.
-
