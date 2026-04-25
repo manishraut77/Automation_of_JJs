@@ -1,56 +1,18 @@
 # Automation of JJ's
 
-This is our JavaFX restaurant management app for JJ's Corner. It includes screens for logging in, managing restaurant work, and testing the different employee roles.
+This project is a JavaFX restaurant management app for JJ's Corner. It was built as a desktop application, with separate workflows for restaurant roles like manager, waiter, busboy, and cook.
 
-## Running the JAR
+## Special Remarks
 
-The runnable JAR is here:
+- The main project folder is `FinalProject/`.
+- The runnable JAR is already included in the repo at `FinalProject/main/target/automation-of-jjs-1.0.0.jar`.
+- A Mac app ZIP is also included at `FinalProject/dist/Automation-of-JJs-mac.zip`.
+- The Mac app ZIP is the easiest option for Mac users because it includes its own Java runtime.
+- Running the JAR directly requires Java JDK 25.
+- The app saves employee, menu, inventory, table, and ticket data after it runs.
+- These default accounts are created when the app starts with no saved employee data. If saved data already exists from a previous run, the app may use that saved data instead.
 
-```text
-FinalProject/main/target/automation-of-jjs-1.0.0.jar
-```
-
-From the main GitHub repo folder, run:
-
-```bash
-java -jar FinalProject/main/target/automation-of-jjs-1.0.0.jar
-```
-
-If you are already inside the `FinalProject` folder, run:
-
-```bash
-java -jar main/target/automation-of-jjs-1.0.0.jar
-```
-
-The JAR needs Java JDK 25. To check your Java version:
-
-```bash
-java -version
-```
-
-## Running the Mac App
-
-If you are on a Mac and do not want to install Java, use this file:
-
-```text
-FinalProject/dist/Automation-of-JJs-mac.zip
-```
-
-Direct GitHub link:
-
-```text
-https://github.com/manishraut77/Automation_of_JJs/blob/main/FinalProject/dist/Automation-of-JJs-mac.zip
-```
-
-Unzip it and open:
-
-```text
-Automation of JJs.app
-```
-
-Mac may show a warning saying Apple cannot verify the app. If that happens, right-click `Automation of JJs.app`, click **Open**, and then click **Open** again. The warning shows up because this app was not signed with an Apple Developer account.
-
-## Default Login Accounts
+## Existing Username and Password Combinations
 
 These accounts are available when the app starts with no saved employee data.
 
@@ -72,27 +34,86 @@ Username: manager
 Password: m1n2g3
 ```
 
-## Folder Structure
+## How to Run the JAR
+
+The JAR file is located here:
 
 ```text
-FinalProject/
-|-- README.md
-|-- dist/
-|   `-- Automation-of-JJs-mac.zip
-`-- main/
-    |-- pom.xml
-    |-- java/
-    |   `-- com/jjcorner/app/
-    |-- resources/
-    |   `-- com/jjcorner/view/
-    `-- target/
-        `-- automation-of-jjs-1.0.0.jar
+FinalProject/main/target/automation-of-jjs-1.0.0.jar
 ```
 
-## Notes
+From the main GitHub repo folder, run:
 
-- The Mac ZIP is the easiest option for Mac users because it already includes Java.
-- The JAR is located in `FinalProject/main/target/`.
-- If you run the JAR directly, Java JDK 25 needs to be installed.
-- The app saves data after it runs, including employees, menu items, inventory, tables, and tickets.
-- If saved data already exists, the default accounts may not be recreated again.
+```bash
+java -jar FinalProject/main/target/automation-of-jjs-1.0.0.jar
+```
+
+If you are already inside the `FinalProject` folder, run:
+
+```bash
+java -jar main/target/automation-of-jjs-1.0.0.jar
+```
+
+To check whether Java is installed:
+
+```bash
+java -version
+```
+
+## How to Run the Mac App
+
+For Mac users, the packaged app is here:
+
+```text
+FinalProject/dist/Automation-of-JJs-mac.zip
+```
+
+Direct GitHub link:
+
+```text
+https://github.com/manishraut77/Automation_of_JJs/blob/main/FinalProject/dist/Automation-of-JJs-mac.zip
+```
+
+Unzip it, then open:
+
+```text
+Automation of JJs.app
+```
+
+Mac may show a warning saying Apple cannot verify the app. If that happens, right-click `Automation of JJs.app`, click **Open**, and then click **Open** again. This happens because the app is not signed with an Apple Developer account.
+
+## Repo Structure
+
+```text
+Automation_of_JJs/
+|-- README.md
+|-- FinalProject/
+|   |-- README.md
+|   |-- README.docx
+|   |-- dist/
+|   |   `-- Automation-of-JJs-mac.zip
+|   `-- main/
+|       |-- pom.xml
+|       |-- java/
+|       |   `-- com/jjcorner/app/
+|       |-- resources/
+|       |   `-- com/jjcorner/view/
+|       `-- target/
+|           `-- automation-of-jjs-1.0.0.jar
+`-- DatabaseSchema/
+```
+
+## Project Approach
+
+The app is organized like a normal JavaFX/Maven project. The Java code is under `FinalProject/main/java`, and the FXML screens, stylesheet, and image resources are under `FinalProject/main/resources`.
+
+The project separates the main responsibilities into packages:
+
+- `model` contains the main data objects, like employees, tables, tickets, menu items, and payments.
+- `service` contains the app logic for authentication, orders, menu data, inventory, tables, sessions, and activity records.
+- `controller` connects the FXML screens to the app logic.
+- `persist` handles saving and loading data so the app can remember changes after it closes.
+- `nav` manages switching between screens.
+- `ui` contains custom JavaFX UI screens and dialogs.
+
+The goal was to keep the app usable as a restaurant workflow demo while still keeping the code organized enough to follow and extend.
