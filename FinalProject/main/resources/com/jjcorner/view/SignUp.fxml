@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.jjcorner.app.controller.SignUpController"
+      spacing="18" alignment="CENTER" style="-fx-background-color: #f3f4f6;">
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <VBox styleClass="card" spacing="12" maxWidth="620">
+        <ImageView fitWidth="150" fitHeight="150" preserveRatio="true" smooth="true">
+            <image>
+                <Image url="@jj-logo.png"/>
+            </image>
+        </ImageView>
+        <Label text="Sign Up" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Label text="Create a new employee account (Waiter or Busboy)." styleClass="muted"/>
+
+        <HBox spacing="12">
+            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                <Label text="Employee ID"/>
+                <TextField fx:id="employeeIdField" promptText="6 chars (e.g. A1B2C3)"/>
+            </VBox>
+            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                <Label text="Role"/>
+                <ComboBox fx:id="roleBox" prefWidth="240"/>
+            </VBox>
+        </HBox>
+
+        <VBox spacing="8">
+            <Label text="Username"/>
+            <TextField fx:id="usernameField" promptText="e.g. waiter2"/>
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Display name (optional)"/>
+            <TextField fx:id="displayNameField" promptText="e.g. Felipe"/>
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Password"/>
+            <PasswordField fx:id="passwordField" promptText="6 chars (not uniform or sequential)"/>
+        </VBox>
+
+        <Label fx:id="errorLabel" text="" style="-fx-text-fill: #dc2626;"/>
+
+        <HBox spacing="12">
+            <padding>
+                <Insets top="6" right="0" bottom="0" left="0"/>
+            </padding>
+            <Button text="Back" onAction="#onBack" prefWidth="140"/>
+            <Button text="Create Account" onAction="#onSignUp" styleClass="btn-primary" prefWidth="460"/>
+        </HBox>
+    </VBox>
+</VBox>
+
