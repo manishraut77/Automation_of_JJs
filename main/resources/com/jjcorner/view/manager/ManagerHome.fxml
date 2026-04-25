@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.jjcorner.app.controller.manager.ManagerHomeController"
+            style="-fx-background-color: #f3f4f6;">
+
+    <top>
+        <HBox styleClass="topbar" spacing="12" alignment="CENTER_LEFT">
+            <ImageView fx:id="logoImage" fitHeight="44" fitWidth="44" preserveRatio="true" smooth="true">
+                <image>
+                    <Image url="@../jj-logo.png"/>
+                </image>
+            </ImageView>
+            <Label fx:id="titleLabel" text="Manager" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <HBox spacing="8">
+                <Button text="Home" onAction="#onHome"/>
+                <Button fx:id="clockButton" text="Clock In" onAction="#onClockToggle" styleClass="btn-primary"/>
+                <Label fx:id="elapsedLabel" text="" styleClass="muted" style="-fx-text-fill: #d1d5db;"/>
+            </HBox>
+            <HBox HBox.hgrow="ALWAYS"/>
+            <Label fx:id="clockLabel" text="" style="-fx-text-fill: #d1d5db; -fx-font-weight: bold;"/>
+            <HBox HBox.hgrow="ALWAYS"/>
+            <Button text="Switch user" onAction="#onSwitchUser"/>
+            <Button text="Logout" onAction="#onLogout" styleClass="btn-danger"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox>
+            <padding>
+                <Insets top="18" right="18" bottom="18" left="18"/>
+            </padding>
+            <GridPane fx:id="floorGrid" hgap="10" vgap="10"/>
+        </VBox>
+    </center>
+
+    <right>
+        <VBox spacing="12" prefWidth="340">
+            <padding>
+                <Insets top="18" right="18" bottom="18" left="18"/>
+            </padding>
+            <VBox styleClass="card" spacing="10">
+                <Label text="Shortcuts" style="-fx-font-weight: bold;"/>
+                <Button text="View My Tables" onAction="#onViewMyTables"/>
+                <Button text="View Order Status" onAction="#onViewOrderStatus"/>
+                <Button fx:id="closedCheckHistoryBtn" text="Closed check history" onAction="#onRetrieveClosedCheck"/>
+            </VBox>
+
+            <VBox styleClass="card" spacing="10">
+                <Label text="Selected Table" style="-fx-font-weight: bold;"/>
+                <Label fx:id="selectedTableLabel" text="None" styleClass="muted"/>
+                <Label fx:id="selectedStatusLabel" text="" styleClass="muted"/>
+                <Label fx:id="assignedLabel" text="" styleClass="muted"/>
+
+                <HBox spacing="10">
+                    <Button fx:id="markOpenBtn" text="Ready (Cleaned)" onAction="#onMarkOpen" />
+                    <Button fx:id="markOccupiedBtn" text="Occupied" onAction="#onMarkOccupied"/>
+                    <Button fx:id="markDirtyBtn" text="Dirty" onAction="#onMarkDirty"/>
+                </HBox>
+                <Button fx:id="openTicketBtn" text="Open / Manage Order" onAction="#onOpenTicket" styleClass="btn-primary"/>
+                <Button fx:id="checkoutBtn" text="Checkout / Payment" onAction="#onCheckout"/>
+            </VBox>
+
+            <VBox styleClass="card" spacing="10">
+                <HBox spacing="10">
+                    <Button fx:id="reportBtn" text="Reports" onAction="#onReportBtn"/>
+                    <Button fx:id="inventoryBtn" text="Inventory" onAction="#onInventoryBtn"/>
+                </HBox>
+                <HBox spacing="10">
+                    <Button fx:id="employeesBtn" text="Employees" onAction="#onEmployeeBtn"/>
+                    <Button fx:id="menuChangeBtn" text="Menu Change" onAction="#onMenuChangeBtn"/>
+                </HBox>
+
+            </VBox>
+
+            <Label fx:id="hintLabel" text="" styleClass="muted"/>
+        </VBox>
+    </right>
+</BorderPane>
+
