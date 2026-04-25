@@ -36,6 +36,12 @@ If you are on a Mac and do not want to install Java, use this file:
 FinalProject/dist/Automation-of-JJs-mac.zip
 ```
 
+Direct GitHub link:
+
+```text
+https://github.com/manishraut77/Automation_of_JJs/blob/main/FinalProject/dist/Automation-of-JJs-mac.zip
+```
+
 Unzip it and open:
 
 ```text
