@@ -56,7 +56,7 @@ These accounts are available when the app starts with no saved employee data.
 
 | Role | Employee ID | Username | Password |
 | --- | --- | --- | --- |
-| Manager | MGR001 | manager1 | m1n2g3 |
+| Manager | MGR001 | manager | m1n2g3 |
 | Waiter | WTR001 | waiter1 | a1b2c3 |
 | Waiter | WTR002 | waiter2 | a2b3c4 |
 | Waiter | WTR003 | waiter3 | a3b4c5 |
@@ -68,7 +68,7 @@ These accounts are available when the app starts with no saved employee data.
 The easiest account to use for testing is:
 
 ```text
-Username: manager1
+Username: manager
 Password: m1n2g3
 ```
 
