@@ -2,22 +2,6 @@
 
 This is our JavaFX restaurant management app for JJ's Corner. It includes screens for logging in, managing restaurant work, and testing the different employee roles.
 
-## Running the Mac App
-
-If you are on a Mac and do not want to install Java, use this file:
-
-```text
-FinalProject/dist/Automation-of-JJs-mac.zip
-```
-
-Unzip it and open:
-
-```text
-Automation of JJs.app
-```
-
-Mac may show a warning saying Apple cannot verify the app. If that happens, right-click `Automation of JJs.app`, click **Open**, and then click **Open** again. The warning shows up because this app was not signed with an Apple Developer account.
-
 ## Running the JAR
 
 The runnable JAR is here:
@@ -43,6 +27,22 @@ The JAR needs Java JDK 25. To check your Java version:
 ```bash
 java -version
 ```
+
+## Running the Mac App
+
+If you are on a Mac and do not want to install Java, use this file:
+
+```text
+FinalProject/dist/Automation-of-JJs-mac.zip
+```
+
+Unzip it and open:
+
+```text
+Automation of JJs.app
+```
+
+Mac may show a warning saying Apple cannot verify the app. If that happens, right-click `Automation of JJs.app`, click **Open**, and then click **Open** again. The warning shows up because this app was not signed with an Apple Developer account.
 
 ## Default Login Accounts
 
