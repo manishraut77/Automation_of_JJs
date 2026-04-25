@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+
+main/target/*
+!main/target/automation-of-jjs-1.0.0.jar
+
+main/META-INF/

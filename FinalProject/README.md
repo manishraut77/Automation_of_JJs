@@ -2,7 +2,59 @@
 
 JavaFX restaurant management/POS application for JJ's Corner.
 
-## How to Run
+## Run the JAR
+
+The runnable JAR is included at:
+
+```text
+main/target/automation-of-jjs-1.0.0.jar
+```
+
+From the `FinalProject` folder, run:
+
+```bash
+java -jar main/target/automation-of-jjs-1.0.0.jar
+```
+
+If you are already inside the `main` folder, run:
+
+```bash
+java -jar target/automation-of-jjs-1.0.0.jar
+```
+
+## Requirements
+
+Install Java JDK 25 before running the JAR.
+
+Check Java:
+
+```bash
+java -version
+```
+
+The project currently uses Java release 25 in `main/pom.xml`:
+
+```xml
+<maven.compiler.release>25</maven.compiler.release>
+```
+
+## Build the JAR
+
+Install Apache Maven if you want to rebuild the JAR from source.
+
+From the `FinalProject/main` folder:
+
+```bash
+mvn clean package
+```
+
+The built JAR will be created here:
+
+```text
+main/target/automation-of-jjs-1.0.0.jar
+```
+
+## Run from Maven
 
 Open a terminal in the downloaded `FinalProject` folder, then go into the Maven project folder:
 
@@ -17,29 +69,6 @@ If you are already outside the folder, use the full path instead:
 cd path/to/FinalProject/main
 mvn javafx:run
 ```
-
-## Requirements for a New Device
-
-Install these before running the app:
-
-- Java JDK 25
-- Apache Maven
-- Internet connection for the first Maven run
-
-Check that Java and Maven are installed:
-
-```bash
-java -version
-mvn -version
-```
-
-The project currently uses Java release 25 in `main/pom.xml`:
-
-```xml
-<maven.compiler.release>25</maven.compiler.release>
-```
-
-If the device has an older JDK, install JDK 25 or update the Maven compiler release only if the project is confirmed to compile with that Java version.
 
 ## First-Time Setup
 
@@ -85,3 +114,4 @@ Password: m1n2g3
 - Run commands from the `main` folder because that is where `pom.xml` is located.
 - The first run may take longer while Maven downloads dependencies.
 - Employee, menu, inventory, table, and ticket data are persisted by the app after use.
+
