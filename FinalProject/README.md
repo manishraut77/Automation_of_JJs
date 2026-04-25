@@ -1,52 +1,52 @@
 # Automation of JJ's
 
-JavaFX restaurant management/POS application for JJ's Corner.
+This is our JavaFX restaurant management app for JJ's Corner. It includes screens for logging in, managing restaurant work, and testing the different employee roles.
 
-## How to Run the App on Mac
+## Running the Mac App
 
-For Mac users who do not have Java installed, use the packaged Mac app:
+If you are on a Mac and do not want to install Java, use this file:
 
 ```text
 FinalProject/dist/Automation-of-JJs-mac.zip
 ```
 
-Download and unzip `Automation-of-JJs-mac.zip`, then open:
+Unzip it and open:
 
 ```text
 Automation of JJs.app
 ```
 
-Special note for Mac: if macOS says Apple cannot verify the app, right-click `Automation of JJs.app`, choose **Open**, then choose **Open** again. This happens because the app is not signed with an Apple Developer account.
+Mac may show a warning saying Apple cannot verify the app. If that happens, right-click `Automation of JJs.app`, click **Open**, and then click **Open** again. The warning shows up because this app was not signed with an Apple Developer account.
 
-## How to Run the JAR
+## Running the JAR
 
-The runnable JAR file is located here:
+The runnable JAR is here:
 
 ```text
 FinalProject/main/target/automation-of-jjs-1.0.0.jar
 ```
 
-From the repository root, run:
+From the main GitHub repo folder, run:
 
 ```bash
 java -jar FinalProject/main/target/automation-of-jjs-1.0.0.jar
 ```
 
-From inside the `FinalProject` folder, run:
+If you are already inside the `FinalProject` folder, run:
 
 ```bash
 java -jar main/target/automation-of-jjs-1.0.0.jar
 ```
 
-Special note for the JAR: Java JDK 25 is required to run the JAR directly. Check Java with:
+The JAR needs Java JDK 25. To check your Java version:
 
 ```bash
 java -version
 ```
 
-## Default Accounts
+## Default Login Accounts
 
-These accounts already exist when the app starts with no saved employee data.
+These accounts are available when the app starts with no saved employee data.
 
 | Role | Employee ID | Username | Password |
 | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ These accounts already exist when the app starts with no saved employee data.
 | Cook | CK002A | cook2 | c2d3e4 |
 | Cook | CK003A | cook3 | c3d4e5 |
 
-Recommended test login:
+The easiest account to use for testing is:
 
 ```text
 Username: manager1
@@ -83,9 +83,10 @@ FinalProject/
         `-- automation-of-jjs-1.0.0.jar
 ```
 
-## Special Remarks
+## Notes
 
-- The Mac app ZIP includes its own Java runtime.
-- The JAR is the main executable file for users who already have Java installed.
-- The app saves employee, menu, inventory, table, and ticket data after use.
-- If data files already exist from a previous run, the default accounts may not be recreated.
+- The Mac ZIP is the easiest option for Mac users because it already includes Java.
+- The JAR is located in `FinalProject/main/target/`.
+- If you run the JAR directly, Java JDK 25 needs to be installed.
+- The app saves data after it runs, including employees, menu items, inventory, tables, and tickets.
+- If saved data already exists, the default accounts may not be recreated again.
